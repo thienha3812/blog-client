@@ -1,12 +1,12 @@
 (function(){    
     angular.module("app.landing").config(config) 
     function config($stateProvider,$urlRouterProvider){
-        $urlRouterProvider.otherwise("/trangchu")
-        $stateProvider.state('landing',{
+        $urlRouterProvider.otherwise("/trang-chu")    
+        $stateProvider.state('Trang chủ',{
             name : "Landing",
-            url : "/trangchu",            
+            url : "/trang-chu",            
             controller : "LandingController",
-            templateUrl : "app/landing/landing.html"
+            templateUrl : "app/trang-chu/trang-chu.html"
         })
     }
 })()

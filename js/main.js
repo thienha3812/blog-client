@@ -14,7 +14,27 @@
 		}
 		lastScrollTop = wScroll
 	});
-
+	// Header nav
+	$('.nav-0').hover(function(){
+		$(this).addClass('cat-3')
+	},function(){
+		$(this).removeClass('cat-3')
+	})
+	$('.nav-1').hover(function(){
+		$(this).addClass('cat-1')
+	},function(){
+		$(this).removeClass('cat-1')
+	})
+	$('.nav-2').hover(function(){
+		$(this).addClass('cat-2')
+	},function(){
+		$(this).removeClass('cat-2')
+	})
+	$('.nav-3').hover(function(){
+		$(this).addClass('cat-4')
+	},function(){
+		$(this).removeClass('cat-4')
+	})
 	// Search Nav
 	$('.search-btn').on('click', function () {
 		$('.search-form').addClass('active');
