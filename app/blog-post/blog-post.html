@@ -77,7 +77,7 @@
                     <!-- comments -->
                     <div class="section-row">
                         <div class="section-title">
-                            <h2>3 Comments</h2>
+                            <h2>Bình luận</h2>
                         </div>
     
                         <div class="post-comments">
@@ -142,14 +142,14 @@
                     <!-- reply -->
                     <div class="section-row">
                         <div class="section-title">
-                            <h2>Leave a reply</h2>
-                            <p>your email address will not be published. required fields are marked *</p>
+                            <h2>Để lại bình luận của bạn tại đây</h2>
+                            <p>Địa chỉ email của bạn sẽ không được công khai *</p>
                         </div>
                         <form class="post-reply">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <span>Name *</span>
+                                        <span>Tên *</span>
                                         <input class="input" type="text" name="name">
                                     </div>
                                 </div>
@@ -158,18 +158,12 @@
                                         <span>Email *</span>
                                         <input class="input" type="email" name="email">
                                     </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <span>Website</span>
-                                        <input class="input" type="text" name="website">
-                                    </div>
-                                </div>
+                                </div>                              
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="input" name="message" placeholder="Message"></textarea>
+                                        <textarea class="input" name="message" placeholder="Nội dung"></textarea>
                                     </div>
-                                    <button class="primary-button">Submit</button>
+                                    <button class="primary-button">Gửi</button>
                                 </div>
                             </div>
                         </form>
@@ -179,52 +173,20 @@
                 <!-- /Post content -->
     
                 <!-- aside -->
-                <div class="col-md-4">
-                    <!-- ad -->
-                    <div class="aside-widget text-center">
-                        <a href="#" style="display: inline-block;margin: auto;">
-                            <img class="img-responsive" src="./img/ad-1.jpg" alt="">
-                        </a>
-                    </div>
-                    <!-- /ad -->
-    
+                <div class="col-md-4">                        
                     <!-- post widget -->
                     <div class="aside-widget">
                         <div class="section-title">
-                            <h2>Most Read</h2>
+                            <h2>Lượt đọc nhiều nhất</h2>
                         </div>
     
-                        <div class="post post-widget">
-                            <a class="post-img" href="blog-post.html"><img src="./img/widget-1.jpg" alt=""></a>
+                        <div class="post post-widget" ng-repeat="post in mostReadPost" >
+                            <a class="post-img" href="blog-post.html"><img ng-src="{{post.img_src}}" alt=""></a>
                             <div class="post-body">
-                                <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And
-                                        Development Tools</a></h3>
+                                <h3 class="post-title"><a style="font-size:15px" ng-href="/#!/bai-viet?id={{post.post_ID}}">{{post.title}}</a></h3>
                             </div>
-                        </div>
-    
-                        <div class="post post-widget">
-                            <a class="post-img" href="blog-post.html"><img src="./img/widget-2.jpg" alt=""></a>
-                            <div class="post-body">
-                                <h3 class="post-title"><a href="blog-post.html">Pagedraw UI Builder Turns Your Website
-                                        Design Mockup Into Code Automatically</a></h3>
-                            </div>
-                        </div>
-    
-                        <div class="post post-widget">
-                            <a class="post-img" href="blog-post.html"><img src="./img/widget-3.jpg" alt=""></a>
-                            <div class="post-body">
-                                <h3 class="post-title"><a href="blog-post.html">Why Node.js Is The Coolest Kid On The
-                                        Backend Development Block!</a></h3>
-                            </div>
-                        </div>
-    
-                        <div class="post post-widget">
-                            <a class="post-img" href="blog-post.html"><img src="./img/widget-4.jpg" alt=""></a>
-                            <div class="post-body">
-                                <h3 class="post-title"><a href="blog-post.html">Tell-A-Tool: Guide To Web Design And
-                                        Development Tools</a></h3>
-                            </div>
-                        </div>
+                        </div>   
+                  
                     </div>
                     <!-- /post widget -->
     

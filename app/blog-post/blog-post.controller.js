@@ -17,15 +17,16 @@
             }
         }).then((result)=>{
 
-            const { post_content,post_title,img_src} = result.data[0]
-            console.log(result.data)
+            const { post_content,post_title,img_src} = result.data[0]            
             $scope.post_content = $sce.trustAsHtml(post_content)                                
-            $scope.post_title = post_title
-            console.log(post_title)
+            $scope.post_title = post_title            
             $scope.speaker.img = img_src                                         
         }).then(()=>{
             $scope.isLoaded = true
         })  
+        $http.get(ENV.API_URL + "/post/mostread").then(result => {
+            $scope.mostReadPost = result.data;                
+        });
         
     }    
 })();
