@@ -10,10 +10,11 @@
                                 <a class="post-img" ng-href="/#!/bai-viet?id={{newsPost[0].post_ID}}"><img style="height:350px" ng-src="{{newsPost[0].img_src}}" alt=""></a>
                                 <div class="post-body">
                                     <div class="post-meta">
-                                        <a class="post-category" ng-class="newsPost[0].category== 'LẬP TRÌNH'?'cat-1':(newsPost[0].category == 'CÔNG NGHỆ' ? 'cat-2' :(newsPost[0].category=='LINH TINH' ? 'cat-3' : ''))" href="category.html">{{newsPost[0].category}}</a>
+                                        <a class="post-category" ng-class="newsPost[0].category== 'LẬP TRÌNH'?'cat-1':(newsPost[0].category == 'CÔNG NGHỆ' ? 'cat-2' :(newsPost[0].category=='BÊN LỀ' ? 'cat-3' : ''))" href="category.html">{{newsPost[0].category}}</a>
                                         <span class="post-date">{{newsPost[0].create_at}}</span>
                                     </div>
                                     <h3 class="post-title" style="height: 50px;"><a style="font-size:17px"  ng-href="/#!/bai-viet?id={{newsPost[0].post_ID}}">{{newsPost[0].post_title}}</a></h3>
+                                    <small style="color:white">{{newsPost[0].content}}.....</small>
                                 </div>
                             </div>
                         </div>
@@ -25,10 +26,10 @@
                                     <a class="post-img" ng-href="/#!/bai-viet?id={{newsPost[1].post_ID}}"><img style="height:350px" ng-src="{{newsPost[1].img_src}}" alt=""></a>
                                     <div class="post-body">
                                         <div class="post-meta">
-                                            <a class="post-category" ng-class="newsPost[1].category== 'LẬP TRÌNH'?'cat-1':(newsPost[1].category == 'CÔNG NGHỆ' ? 'cat-2' :(newsPost[1].category=='LINH TINH' ? 'cat-3' : ''))" href="category.html">{{newsPost[1].category}}</a>
+                                            <a class="post-category" ng-class="newsPost[1].category== 'LẬP TRÌNH'?'cat-1':(newsPost[1].category == 'CÔNG NGHỆ' ? 'cat-2' :(newsPost[1].category=='BÊN LỀ' ? 'cat-3' : ''))" href="category.html">{{newsPost[1].category}}</a>
                                             <span class="post-date">{{newsPost[1].create_at}}</span>
                                         </div>
-                                        <h3 class="post-title" style="height: 50px;"><a style="font-size:17px" ng-href="/#!/bai-viet?id={{newsPost[1].post_ID}}">{{newsPost[1].post_title}}</a></h3>
+                                        <h3 class="post-title" style="height: 50px;"><a style="font-size:17px" ng-href="/#!/bai-viet?id={{newsPost[1].post_ID}}">{{newsPost[1].post_title}}</a></h3>                                        
                                     </div>
                                 </div>
                             </div>
@@ -48,10 +49,10 @@
                                         <a class="post-img" ng-href="/#!/bai-viet?id={{newsPost[2].post_ID}}"><img class="w-100"  style="height:400px" ng-src="{{newsPost[2].img_src}}" alt=""></a>
                                         <div class="post-body">
                                             <div class="post-meta">
-                                                <a class="post-category" ng-class="newsPost[2].category== 'LẬP TRÌNH'?'cat-1':(newsPost[2].category == 'CÔNG NGHỆ' ? 'cat-2' :(newsPost[2].category=='LINH TINH' ? 'cat-3' : ''))" href="category.html">{{newsPost[2].category}}</a>
+                                                <a class="post-category" ng-class="newsPost[2].category== 'LẬP TRÌNH'?'cat-1':(newsPost[2].category == 'CÔNG NGHỆ' ? 'cat-2' :(newsPost[2].category=='BÊN LỀ' ? 'cat-3' : ''))" href="category.html">{{newsPost[2].category}}</a>
                                                 <span class="post-date">{{newsPost[2].create_at}}</span>
                                             </div>
-                                            <h3 class="post-title"><a ng-href="/#!/bai-viet?id={{newsPost[2].post_ID}}">{{newsPost[2].post_title}}</a></h3>
+                                            <h3 class="post-title"><a ng-href="/#!/bai-viet?id={{newsPost[2].post_ID}}">{{newsPost[2].post_title}}</a></h3>                                            
                                         </div>
                                     </div>
                                 </div>
@@ -63,9 +64,9 @@
                                         <a class="post-img" ng-href="/#!/bai-viet?id={{i.post_ID}}"><img style="height: 200px;" ng-src="{{i.img_src}}" alt=""></a>
                                         <div class="post-body">
                                             <div class="post-meta">
-                                                <a class="post-category" ng-class="i.category== 'LẬP TRÌNH'?'cat-1':(i.category == 'CÔNG NGHỆ' ? 'cat-2' :(i.category=='LINH TINH' ? 'cat-3' : ''))" href="category.html">{{i.category}}</a>
+                                                <a class="post-category" ng-class="i.category== 'LẬP TRÌNH'?'cat-1':(i.category == 'CÔNG NGHỆ' ? 'cat-2' :(i.category=='BÊN LỀ' ? 'cat-3' : ''))" href="category.html">{{i.category}}</a>
                                                 <span class="post-date">{{i.create_at}}</span>
-                                            </div>
+                                            </div>                                            
                                             <h3 class="post-title"><a style="font-size:16px" ng-href="/#!/bai-viet?id={{i.post_ID}}">{{i.post_title}}</a></h3>
                                         </div>
                                     </div>
@@ -103,24 +104,24 @@
                                     <h2>Có thể bạn cần đọc</h2>
                                 </div>
                                 <div class="post post-thumb">
-                                    <a class="post-img" href="blog-post.html"><img src="./img/post-2.jpg" alt=""></a>
+                                    <a class="post-img" "><img height="250" width="200" ng-src="{{randomPost[0].img_src}}" alt=""></a>
                                     <div class="post-body">
                                         <div class="post-meta">
-                                            <a class="post-category cat-3" href="category.html">Jquery</a>
-                                            <span class="post-date">March 27, 2018</span>
+                                            <a class="post-category" ng-class="randomPost[0].category== 'LẬP TRÌNH'?'cat-1':(randomPost[0].category == 'CÔNG NGHỆ' ? 'cat-2' :(randomPost[0].category=='BÊN LỀ' ? 'cat-3' : ''))" href="category.html">{{randomPost[0].category}}</a>
+                                            <span class="post-date">{{randomPost[0].create_at}}</span>
                                         </div>
-                                        <h3 class="post-title"><a href="blog-post.html">Ask HN: Does Anybody Still Use JQuery?</a></h3>
+                                        <h3 class="post-title"><a ng-href="/#!/baiviet?id={{randomPost[0].post_ID}}">{{randomPost[0].post_title}}</a></h3>
                                     </div>
                                 </div>
         
                                 <div class="post post-thumb">
-                                    <a class="post-img" href="blog-post.html"><img src="./img/post-1.jpg" alt=""></a>
+                                    <a class="post-img" href="blog-post.html"><img height="250" width="200" ng-src="{{randomPost[1].img_src}}" alt=""></a>
                                     <div class="post-body">
                                         <div class="post-meta">
-                                            <a class="post-category cat-2" href="category.html">JavaScript</a>
-                                            <span class="post-date">March 27, 2018</span>
+                                            <a class="post-category" ng-class="randomPost[1].category== 'LẬP TRÌNH'?'cat-1':(randomPost[1].category == 'CÔNG NGHỆ' ? 'cat-2' :(randomPost[1].category=='BÊN LỀ' ? 'cat-3' : ''))" href="category.html">{{randomPost[1].category}}</a>
+                                            <span class="post-date">{{randomPost[1].create_at}}</span>
                                         </div>
-                                        <h3 class="post-title"><a href="blog-post.html">Chrome Extension Protects Against JavaScript-Based CPU Side-Channel Attacks</a></h3>
+                                        <h3 class="post-title"><a href="blog-post.html">{{randomPost[1].post_title}}</a></h3>
                                     </div>
                                 </div>
                             </div>
@@ -140,36 +141,7 @@
             <!-- /section -->
             
             <!-- section -->
-            <div class="section section-grey">
-                <!-- container -->
-                <div class="container">
-                    <!-- row -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-title text-center">
-                                <h2>Đọc nhiều nhất trong ngày</h2>
-                            </div>
-                        </div>
-        
-                        <!-- post -->
-                        <div class="col-md-4" ng-repeat="i in mostReadInDay"> 
-                            <div class="post">
-                                <a class="post-img" href="blog-post.html"><img ng-src="{{i.img_src}}" alt=""></a>
-                                <div class="post-body">
-                                    <div class="post-meta">
-                                        <a class="post-category cat-2" href="category.html">{{i.category}}</a>
-                                        <span class="post-date">{{i.create_at}}</span>
-                                    </div>
-                                    <h3 class="post-title"><a href="blog-post.html">{{i.post_title}}</a></h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /post -->                                                
-                    </div>
-                    <!-- /row -->
-                </div>
-                <!-- /container -->
-            </div>
+            
             <!-- /section -->
         
           

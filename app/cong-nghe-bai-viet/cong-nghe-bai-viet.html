@@ -1,0 +1,125 @@
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div>
+            <div class="col-md-12 section-title">
+                <h2>Bài viết bên lề</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="row post " ng-repeat="i in post">
+                    <div class="col-sm-4">
+                        <img height="150" width="200" ng-src="{{i.img_src}}" />
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col">
+                                <h3><a ng-href="/#!/bai-viet?id={{i.post_ID}}">{{i.post_title}}</a></h3>
+                            </div>
+                        </div>
+                        <div class="row" style="height:40px">
+                            <div class="col-sm-6" style="padding:0">
+                                <div class="post-body">
+                                    <div class="post-meta" style="margin:0">
+                                        <a class="post-category"
+                                            ng-class="i.category== 'LẬP TRÌNH'?'cat-1':(i.category == 'CÔNG NGHỆ' ? 'cat-2' :(i.category=='BÊN LỀ' ? 'cat-3' : ''))"
+                                            href="category.html">{{i.category}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="post-body">
+                                    <div class="post-meta" style="margin:0">
+                                        <span class="post-date">{{i.create_at}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col " style="display:flex;justify-content: center;">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-TINHk" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item" ng-repeat="i in currentPagination"
+                                    ng-click="currentPaginationIndex = i;selectPaginate($event,i)"
+                                    ng-class="currentPaginationIndex==i ? 'current' : ''"><a class="page-link"
+                                        href="javascript:void(0)">{{i}}</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- post widget -->
+                <div class="aside-widget">
+                    <div class="section-title">
+                        <h2>Lượt đọc nhiều nhất</h2>
+                    </div>
+
+                    <div class="post post-widget" ng-repeat="post in mostReadPost">
+                        <a class="post-img" href="blog-post.html"><img ng-src="{{post.img_src}}" alt=""></a>
+                        <div class="post-body">
+                            <h3 class="post-title"><a style="font-size:15px"
+                                    ng-href="/#!/bai-viet?id={{post.post_ID}}">{{post.title}}</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- /post widget -->
+
+                <!-- post widget -->
+                <div class="aside-widget">
+                    <div class="section-title">
+                        <h2>Có thể bạn cần đọc</h2>
+                    </div>
+                    <div class="post post-thumb">
+                        <a class="post-img" href="blog-post.html"><img src="./img/post-2.jpg" alt=""></a>
+                        <div class="post-body">
+                            <div class="post-meta">
+                                <a class="post-category cat-3" href="category.html">Jquery</a>
+                                <span class="post-date">March 27, 2018</span>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Ask HN: Does Anybody Still Use JQuery?</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="post post-thumb">
+                        <a class="post-img" href="blog-post.html"><img src="./img/post-1.jpg" alt=""></a>
+                        <div class="post-body">
+                            <div class="post-meta">
+                                <a class="post-category cat-2" href="category.html">JavaScript</a>
+                                <span class="post-date">March 27, 2018</span>
+                            </div>
+                            <h3 class="post-title"><a href="blog-post.html">Chrome Extension Protects Against
+                                    JavaScript-Based CPU Side-Channel Attacks</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- /post widget -->
+
+                <!-- ad -->
+                <div class="aside-widget text-center">
+                    <a href="https://www.vultr.com/?ref=7955628"><img
+                            src="https://www.vultr.com/media/banners/banner_300x250.png" width="300" height="250"></a>
+                </div>
+                <!-- /ad -->
+            </div>
+        </div>
+    </div>
+</div>

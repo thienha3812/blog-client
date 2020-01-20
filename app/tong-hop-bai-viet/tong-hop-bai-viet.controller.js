@@ -3,8 +3,7 @@
     angular.module("app.all-post").controller("AllPostController",AllPostController)
     function AllPostController($scope,$http,$state,ENV){
         $scope.currentPaginationIndex = 1
-        $scope.routeName = $state.$current.name
-        $scope.currentPaginationIndex = 1         
+        $scope.routeName = $state.$current.name        
         // Get data when page loaded
         $http({
             method  : "POST",
@@ -38,13 +37,22 @@
             $http({
                 method  : "POST",
                 url : ENV.API_URL + "/post/allpost",
-                data : {start : (index-1)*0}
-            }).then((result)=>{                            
+                data : {start : (index-1)*10}
+            }).then((result)=>{      
+                console.log(result)
+                $scope.post = []                      
                 $scope.post = result.data
                 $scope.post.forEach(x =>{
                     x.create_at = moment(x.create_at).format("LL");
                 })
             })         
         }
+        $http.get(ENV.API_URL + "/post/random").then((result)=>{
+            $scope.randomPost = result.data            
+            $scope.randomPost.forEach(x =>{ 
+              
+              x.create_at = moment(x.create_at).format("LL")
+            })
+          })
     }    
 })();

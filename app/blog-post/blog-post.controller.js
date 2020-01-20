@@ -16,8 +16,10 @@
                 id : $location.$$search.id
             }
         }).then((result)=>{
-
-            const { post_content,post_title,img_src} = result.data[0]            
+            console.log(result)
+            const {create_at,category,post_content,post_title,img_src} = result.data[0]            
+            $scope.create_at =  moment(create_at).format("LL");
+            $scope.category = category
             $scope.post_content = $sce.trustAsHtml(post_content)                                
             $scope.post_title = post_title            
             $scope.speaker.img = img_src                                         

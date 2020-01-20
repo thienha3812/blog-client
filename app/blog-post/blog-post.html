@@ -7,8 +7,10 @@
                 <div class="row">
                     <div class="col-md-10">
                         <div class="post-meta">
-                            <a class="post-category cat-2" href="category.html">JavaScript</a>
-                            <span class="post-date">March 27, 2018</span>
+                            <a class="post-category"
+                                    ng-class="category== 'LẬP TRÌNH'?'cat-1':(category == 'CÔNG NGHỆ' ? 'cat-2' :(category=='LINH TINH' ? 'cat-3' : ''))"
+                                    >{{category}}</a>
+                            <span class="post-date">{{create_at}}</span>
                         </div>
                         <h1>{{post_title}}</h1>
                     </div>
@@ -29,7 +31,11 @@
                     
                     <div class="section-row sticky-container">
                         <div class="main-post">                            
-                            <div ng-bind-html="post_content"></div>
+                            <div class="row">
+                                <div class="col">
+                                    <div ng-bind-html="post_content"></div>
+                                </div>
+                            </div>
                             
                         </div>
                         <div class="post-shares sticky-shares">
@@ -53,11 +59,11 @@
                         <div class="post-author">
                             <div class="media">
                                 <div class="media-left">
-                                    <img class="media-object" src="./img/author.png" alt="">
+                                    <img class="media-object" style="width:100px;height:100px" src="https://dotobjyajpegd.cloudfront.net/photo/5d3a66f962710e25dc99ffa3" alt="">
                                 </div>
                                 <div class="media-body">
                                     <div class="media-heading">
-                                        <h3>John Doe</h3>
+                                        <h3>Administrator</h3>
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -88,7 +94,7 @@
                                 </div>
                                 <div class="media-body">
                                     <div class="media-heading">
-                                        <h4>John Doe</h4>
+                                        <h4>User</h4>
                                         <span class="time">March 27, 2018 at 8:00 am</span>
                                         <a href="#" class="reply">Reply</a>
                                     </div>
@@ -103,7 +109,7 @@
                                         </div>
                                         <div class="media-body">
                                             <div class="media-heading">
-                                                <h4>John Doe</h4>
+                                                <h4>User</h4>
                                                 <span class="time">March 27, 2018 at 8:00 am</span>
                                                 <a href="#" class="reply">Reply</a>
                                             </div>
@@ -125,7 +131,7 @@
                                 </div>
                                 <div class="media-body">
                                     <div class="media-heading">
-                                        <h4>John Doe</h4>
+                                        <h4>User</h4>
                                         <span class="time">March 27, 2018 at 8:00 am</span>
                                         <a href="#" class="reply">Reply</a>
                                     </div>
@@ -211,7 +217,9 @@
                             <a class="post-img" href="blog-post.html"><img src="./img/post-1.jpg" alt=""></a>
                             <div class="post-body">
                                 <div class="post-meta">
-                                    <a class="post-category cat-2" href="#">JavaScript</a>
+                                    <a class="post-category"
+                                    ng-class="category== 'LẬP TRÌNH'?'cat-1':(category == 'CÔNG NGHỆ' ? 'cat-2' :(category=='LINH TINH' ? 'cat-3' : ''))"
+                                    >{{category}}</a>
                                     <span class="post-date">March 27, 2018</span>
                                 </div>
                                 <h3 class="post-title"><a href="blog-post.html">Chrome Extension Protects Against
